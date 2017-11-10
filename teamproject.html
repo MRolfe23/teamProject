@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +11,10 @@
 html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 table, th, td {
     border: 1px solid black;
+}
+#chartContain {
+	height: 200px;
+	width: 100%;
 }
 </style>
 <body class="w3-light-grey">
@@ -79,9 +84,12 @@ table, th, td {
       </div>
     </div>
 
+	<canvas id="myChart" width="50px" height="100px"></canvas>
+
 <!-- Import Data js -->
 <script src="TopMoviesData.js"></script>
 <script src="teamproject.js"></script>
+<script src="barChart.js"></script>
 
 <!-- footer -->
 <div class="w3-container w3-dark-grey w3-padding-32">
@@ -102,53 +110,5 @@ table, th, td {
 
   <!-- End page content -->
 </div>
-<canvas id="myChart" width="400" height="400"></canvas>
-	<script>
-	var ctx = document.getElementById("myChart");
-	var myChart = new Chart(ctx, {
-		type: 'bar',
-		data: {
-			labels: (function(){
-				   var arr = [];
-				   for(var i=0; i<5; i++){
-					   arr.push(movieData_Array[i].rating);
-				   }
-				   return arr;
-			   })("rating:")
-			
-			/**[data[0].institution_name, data[1].institution_name, data[2].institution_name, data[3].institution_name, data[4].institution_name, data[5].institution_name]**/,
-			datasets: [{
-				label: 'Movie rating',
-				data: [movieData_Array[0].rating, movieData_Array[1].rating, movieData_Array[2].rating, movieData_Array[3].rating, movieData_Array[4].rating, movieData_Array[5].rating],
-				backgroundColor: [
-					'rgba(255, 99, 132, 0.2)',
-					'rgba(54, 162, 235, 0.2)',
-					'rgba(255, 206, 86, 0.2)',
-					'rgba(75, 192, 192, 0.2)',
-					'rgba(153, 102, 255, 0.2)',
-					'rgba(255, 159, 64, 0.2)'
-				],
-				borderColor: [
-					'rgba(255,99,132,1)',
-					'rgba(54, 162, 235, 1)',
-					'rgba(255, 206, 86, 1)',
-					'rgba(75, 192, 192, 1)',
-					'rgba(153, 102, 255, 1)',
-					'rgba(255, 159, 64, 1)'
-				],
-				borderWidth: 1
-			}]
-		},
-		options: {
-			scales: {
-				yAxes: [{
-					ticks: {
-						beginAtZero:true
-					}
-				}]
-			}
-		}
-	});
-	</script>
 </body>
 </html>
