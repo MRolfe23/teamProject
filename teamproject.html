@@ -111,7 +111,7 @@ table, th, td {
 			labels: (function(){
 				   var arr = [];
 				   for(var i=0; i<5; i++){
-					   arr.push(data[i].rating);
+					   arr.push(movieData_Array[i].rating);
 				   }
 				   return arr;
 			   })("rating:")
@@ -119,7 +119,7 @@ table, th, td {
 			/**[data[0].institution_name, data[1].institution_name, data[2].institution_name, data[3].institution_name, data[4].institution_name, data[5].institution_name]**/,
 			datasets: [{
 				label: 'Movie rating',
-				data: [data[0].rating, data[1].rating, data[2].rating, data[3].rating, data[4].rating, data[5].rating],
+				data: [movieData_Array[0].rating, movieData_Array[1].rating, movieData_Array[2].rating, movieData_Array[3].rating, movieData_Array[4].rating, movieData_Array[5].rating],
 				backgroundColor: [
 					'rgba(255, 99, 132, 0.2)',
 					'rgba(54, 162, 235, 0.2)',
