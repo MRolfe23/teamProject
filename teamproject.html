@@ -12,10 +12,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 table, th, td {
     border: 1px solid black;
 }
-#chartContain {
-	height: 200px;
-	width: 100%;
-}
 </style>
 <body class="w3-light-grey">
 
@@ -35,8 +31,8 @@ table, th, td {
   <header class="w3-container" style="padding-top:22px">
   <h4>Welcome to Movie Lovers! The answer to your movie questions!</br>
 	Why we decided to do this project on movie data is that many people are curious about movie facts and data and there is so much information to provide
-	on movies. This data would impact movie critiques, people interested in movies, and movie goers. The data is pulled from IMDB database. 
-	The data was gathered throughtout the months septmeber and october. The data is useful for the same reason of who, movie critiques, everyday 
+	on movies. This data would impact movie critiques, people interested in movies, and movie goers. The data is pulled from IMDB database.
+	The data was gathered throughtout the months septmeber and october. The data is useful for the same reason of who, movie critiques, everyday
 	movie goers and movie lovers alike.</h4>
     <h5><b><i class="fa fa-dashboard"></i> Top Movie Stats</b></h5>
   </header>
@@ -77,14 +73,14 @@ table, th, td {
       <table id="table" style="width:100%">
 		  <tr>
 			<th>Title</th>
-			<th>Rating</th> 
+			<th>Rating</th>
 			<th>Total Revenue</th>
 		  </tr>
 		</table>
       </div>
     </div>
 
-	<canvas id="myChart" width="50px" height="100px"></canvas>
+	<canvas id="chartContainer" width="1500" height="500"></canvas>
 
 <!-- Import Data js -->
 <script src="TopMoviesData.js"></script>

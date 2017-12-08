@@ -1,4 +1,4 @@
-var ctx = document.getElementById("myChart");
+var ctx = document.getElementById("chartContainer");
 	var myChart = new Chart(ctx, {
 		type: 'bar',
 		data: {
@@ -8,9 +8,8 @@ var ctx = document.getElementById("myChart");
 					   arr.push(movieData_Array[i].rankTitle);
 				   }
 				   return arr;
-			   })("Movie Title:")
-			
-			/**[data[0].institution_name, data[1].institution_name, data[2].institution_name, data[3].institution_name, data[4].institution_name, data[5].institution_name]**/,
+			   })("Movie Title:"),
+
 			datasets: [{
 				label: 'Movie Ratings',
 				data: [movieData_Array[0].rating, movieData_Array[1].rating, movieData_Array[2].rating, movieData_Array[3].rating, movieData_Array[4].rating],
@@ -34,6 +33,7 @@ var ctx = document.getElementById("myChart");
 			}]
 		},
 		options: {
+			responsive: false,
 			scales: {
 				yAxes: [{
 					ticks: {
