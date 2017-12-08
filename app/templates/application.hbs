@@ -1,0 +1,26 @@
+﻿<div><strong>CONCEPTS</strong></div>
+<div><u><strong>TEMPLATES</strong></u></div>
+<div>
+  A template, written in the Handlebars templating language, describes the user interface of your application. Each template is backed by a model, and the template automatically updates itself if the model changes.
+
+  In addition to plain HTML, templates can contain:
+  <div>
+    <strong>Expressions</strong>, like {{firstName}}, which take information from the template's model and put it into HTML.
+    <br /><strong>Outlets</strong>, which are placeholders for other templates. As users move around your app, different templates can be plugged into the outlet by the router. You can put outlets into your template using the {{outlet}} helper.
+    <br /><strong>Components</strong>, custom HTML elements that you can use to clean up repetitive templates or create reusable controls.
+  </div>
+  <div><u><strong>Routers</strong></u></div>
+  <div>
+    The router translates a URL into a series of nested templates, each backed by a model. As the templates or models being shown to the user change, Ember automatically keeps the URL in the browser's address bar up-to-date.
+
+    This means that, at any point, users are able to share the URL of your app. When someone clicks the link, they reliably see the same content as the original user.
+  </div>
+  <div><u><strong>COMPONENTS</strong></u></div>
+  <div>A component is a custom HTML tag whose behavior you implement using JavaScript and whose appearance you describe using Handlebars templates. They allow you to create reusable controls that can simplify your application's templates.</div>
+  <div><u><strong>MODELS</strong></u></div>
+  <div>A model is an object that stores persistent state. Templates are responsible for displaying the model to the user by turning it into HTML. In many applications, models are loaded via an HTTP JSON API, although Ember is agnostic to the backend that you choose.</div>
+  <div><u><strong>ROUTE</strong></u></div>
+  <div>A route is an object that tells the template which model it should display.</div>
+  <div><u><strong>CONTROLLERS</strong></u></div>
+  <div>A controller is an object that stores application state. A template can optionally have a controller in addition to a model, and can retrieve properties from both.</div>
+</div>
